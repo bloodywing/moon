@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: Install Requirements
-        run: apt install libsdl2-dev libsdl2-image-dev gifsicle
+        run: sudo apt install libsdl2-dev libsdl2-image-dev gifsicle
 
       # Runs a single command using the runners shell
       - name: PIP requirements
