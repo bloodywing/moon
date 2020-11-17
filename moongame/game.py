@@ -33,7 +33,7 @@ class Game:
 
         self.current_scene = StartScene(self)
 
-        pyxel.load('assets/base.pyxres')
+        pyxel.load(os.path.join(game_path, 'assets', 'base.pyxres'))
         self.player = NoobShip()
         pyxel.run(self.update, self.draw)
 
