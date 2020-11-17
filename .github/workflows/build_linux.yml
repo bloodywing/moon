@@ -40,7 +40,12 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: SDL WTF
+        env:
+          CC: gcc-9
+          CXX: g++-9
         run: |
+          sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 9
+          sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/gcc-9 9
           cd vendor
           bash build.sh
           cd ..
