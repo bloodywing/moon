@@ -32,3 +32,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build
         run: pyxelpackager main.py
+      
+      - name: Upload Linux Build
+        uses: actions/upload-artifact@v2.2.1
+        with:
+          name: Linux Binary
+          path: dist/main
