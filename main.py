@@ -1,6 +1,10 @@
 import argparse
+from ctypes import cdll
 from gettext import gettext as _
 from moongame.game import Game
+
+# This is a hack to help pyinstaller detecting the sdl2 library
+cdll.LoadLibrary('libSDL2_image-2.0.so.0')
 
 
 if __name__ == '__main__':

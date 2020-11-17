@@ -28,13 +28,13 @@ class Game:
             self.logger.setLevel(logging.DEBUG)
 
         # set screen size, scale and fullscreen or not
-        pyxel.init(height=HEIGHT, width=WIDTH, fullscreen=args.fullscreen, scale=args.scale, fps=16)
-        self.logger.debug('Moon started')
-
+        pyxel.init(height=HEIGHT, width=WIDTH, caption='Moon', fullscreen=args.fullscreen, scale=args.scale, fps=16)
         self.current_scene = StartScene(self)
 
         pyxel.load(os.path.join(game_path, 'assets', 'base.pyxres'))
         self.player = NoobShip()
+
+        self.logger.debug('Moon started')
         pyxel.run(self.update, self.draw)
 
     @property
