@@ -4,11 +4,11 @@ from ctypes import cdll
 from gettext import gettext as _
 from moongame.game import Game
 import pymunk
+import os
 
 if platform.system() == 'Linux':
     # This is a hack to help pyinstaller detecting the sdl2 library
     cdll.LoadLibrary('libSDL2_image-2.0.so.0')
-
 cdll.LoadLibrary(pymunk.chipmunk_path)
 
 if __name__ == '__main__':
