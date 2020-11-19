@@ -1,6 +1,7 @@
 class Gravity:
     ms2 = 0
     atmo = 0
+    grav_vector = 0, 900
 
     def speed_after_x_duration(self, duration: int) -> float:
         return (self.ms2 * duration ^ 2) / 2
